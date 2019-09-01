@@ -7,7 +7,7 @@
       <h4>
         {{p.name}}
         <span class="badge badge-pill badge-primary float-right">
-          {{ p.price }}
+          {{ p.price | currency }}
         </span>
       </h4>
       <div class="card-text bg-white p-1">{{ p.description }}</div>
@@ -22,6 +22,11 @@ export default {
     ...mapState([
       'products'
     ])
+  },
+  filters: {
+    currency (value) {
+      return new Intl.NumberFormat('ru-Ru', { style: 'currency', currency: 'RUB' }).format(value)
+    }
   }
 }
 </script>
