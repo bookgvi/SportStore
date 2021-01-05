@@ -9,7 +9,7 @@
     "json": "json-server data.js -p 3500 -m authMiddleware.js"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1",
     "core-js": "^2.6.5",
     "font-awesome": "^4.7.0",
